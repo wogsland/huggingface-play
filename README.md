@@ -16,3 +16,11 @@ python api-test.py
 ## Results
 
 <img src="natural_bridge.png" />
+
+## Audio -> Text -> Summary App
+
+```
+python app.py
+```
+
+...but it seems only to work with paid features.
