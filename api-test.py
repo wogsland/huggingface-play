@@ -1,0 +1,15 @@
+import os
+from huggingface_hub import InferenceClient
+
+client = InferenceClient(
+    provider="auto",
+    api_key=os.environ["HF_TOKEN"],
+)
+
+# output is a PIL.Image object
+image = client.text_to_image(
+    "Jesus riding a velociraptor",
+    model="black-forest-labs/FLUX.1-schnell",
+)
+
+image.save("output_image.png")
